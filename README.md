@@ -5,11 +5,11 @@ This guide outlines the build, deployment, and testing steps for the instruction
 1. Build and Deployment
 
 Run the following commands sequentially from the project root directory 
-1. mvn clean package -DskipTests	
-2. mvn clean install -DskipTests	
-3. docker compose down -v	
-4. docker compose up -d	
-5. docker compose up --build	
+a. mvn clean package -DskipTests	
+b. mvn clean install -DskipTests	
+c. docker compose down -v	
+d. docker compose up -d	
+e. docker compose up --build	
 
 2. API Testing and Interaction
 
