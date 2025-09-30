@@ -2,12 +2,12 @@ Instructions Capture Service: Operation Guide
 
      1. Build and Deployment
 
-Run the following commands sequentially from the project root directory 
-1. mvn clean package -DskipTests	
-2. mvn clean install -DskipTests	
-3. docker compose down -v	
-4. docker compose up -d	
-5. docker compose up --build	
+          Run the following commands sequentially from the project root directory 
+          1. mvn clean package -DskipTests	
+          2. mvn clean install -DskipTests	
+          3. docker compose down -v	
+          4. docker compose up -d	
+          5. docker compose up --build	
 
      2. API Testing and Interaction
 
