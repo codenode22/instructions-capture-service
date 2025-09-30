@@ -35,8 +35,6 @@ public class TradeTransformer {
     }
 
     public CanonicalTrade deserializationToCanonicalTrade(String message){
-     
-  
         ObjectMapper objectMapper = new ObjectMapper();
         // Register the JavaTimeModule to handle Java 8 Date and Time API types, such as Instant.
         objectMapper.registerModule(new JavaTimeModule());
@@ -44,8 +42,6 @@ public class TradeTransformer {
         try {
             //Use the readValue() method to convert the JSON string to a CanonicalTrade object
             CanonicalTrade trade = objectMapper.readValue(message, CanonicalTrade.class);
-
-
             return trade;
         } catch (JsonProcessingException e) {
             System.err.println("Error deserializing JSON: " + e.getMessage());

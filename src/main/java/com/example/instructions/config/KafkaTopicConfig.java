@@ -8,6 +8,8 @@ import org.springframework.kafka.config.TopicBuilder;
 @Configuration
 public class KafkaTopicConfig {
 
+  
+
     @Bean
     public NewTopic inboundTopic() {
         return TopicBuilder.name("instructions.inbound")
@@ -22,4 +24,6 @@ public class KafkaTopicConfig {
                 .replicas(1)
                 .build();
     }
+
+  
 }

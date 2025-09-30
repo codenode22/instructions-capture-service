@@ -26,19 +26,16 @@ public class KafkaPublisher {
             if (ex == null) {
                 // Success Callback: Executed when the message is acknowledged by Kafka
                 System.out.printf(
-                    "✅ Successfully sent message to topic %s on partition %d with offset %d%n",
+                    "Successfully sent message to topic %s on partition %d with offset %d%n",
                     result.getRecordMetadata().topic(),
                     result.getRecordMetadata().partition(),
                     result.getRecordMetadata().offset()
                 );
             } else {
                 // Failure Callback: Executed if the send operation fails after retries
-                System.err.printf("❌ Failed to send message to topic %s. Error: %s%n", 
+                System.err.printf("Failed to send message to topic %s. Error: %s%n", 
                                   topicName, ex.getMessage());
-                // Log failure or handle retry logic here
             }
         });
-        
-        // The method immediately returns, ensuring high throughput.
     }
 }
