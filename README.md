@@ -55,5 +55,9 @@ Received message from instructions.inbound - {"account":"****1234","security":"A
 Producing message to instructions.outbound: {"trade":{"account":"****1234","security":"ABC123","type":"B","amount":100000,"timestamp":"2025-08-04T21:15:33Z"},"platform_id":"ACCT123"}
 Received message from instructions.outbound - {"trade":{"account":"****2345","security":"DEF456","type":"B","amount":75000,"timestamp":"2025-08-05T15:45:00Z"},"platform_id":"ACCT125"}
 
+4. Junit
+
+   TradeTransformerTest
+
 
 Gemini can make mistakes, so double-check it
