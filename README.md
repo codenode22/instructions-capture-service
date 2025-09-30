@@ -9,8 +9,6 @@ Run the following commands sequentially from the project root directory
 4. docker compose up -d	
 5. docker compose up --build	
 
-
-
      2. API Testing and Interaction
 
 The service endpoint is available for testing using curl.
