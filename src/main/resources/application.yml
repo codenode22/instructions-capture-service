@@ -14,3 +14,16 @@ logging:
   level:
     org.springframework.kafka: DEBUG
     org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener: debug
+
+springdoc:
+  swagger-ui:
+    # Set the path where the UI will be accessible
+    path: /swagger-ui.html
+  api-docs:
+    # Set the path where the raw OpenAPI JSON/YAML is accessible
+    path: /v3/api-docs
+  info:
+    title: Instructions Capture API
+    version: v1.0.0
+    description: API for processing and transforming canonical trade instructions via Kafka.
+    

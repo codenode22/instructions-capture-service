@@ -4,8 +4,6 @@ import com.example.instructions.model.CanonicalTrade;
 import com.example.instructions.model.PlatformTrade;
 import org.junit.jupiter.api.Test;
 import java.io.IOException;
-import java.math.BigDecimal;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class TradeTransformerTest {

@@ -10,11 +10,22 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean; // Used for thread-safe flag
 import com.fasterxml.jackson.core.JsonProcessingException;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.ExampleObject;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import java.math.BigDecimal;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.http.ResponseEntity;
 
+
+
 @RestController
+@Tag(name = "Trade Processing", description = "Endpoints for handling inbound trade instructions.") // 1. Tag for grouping
 public class TradeController {
 
     private final KafkaPublisher kafkaPublisher;
@@ -25,6 +36,28 @@ public class TradeController {
     }
 
     @PostMapping("/trades")
+    @Operation(
+        summary = "Process a list of raw trade objects",
+        description = "Receives trade data for Kafka processing.",
+        
+        // --- FIX IS HERE: Use the fully qualified name for the Swagger annotation ---
+        requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody( 
+            description = "A list of raw trade objects to be processed.",
+            required = true,
+            content = @Content(
+                mediaType = "application/json",
+                schema = @Schema(implementation = List.class),
+                examples = @ExampleObject(
+                    name = "ExampleTradeList",
+                    value = "[{\"platform_id\": \"P001\", \"account\": \"A123\", \"security\": \"AAPL\", \"type\": \"BUY\", \"amount\": \"100.50\", \"timestamp\": \"2025-09-30T10:00:00Z\"}]"
+                )
+            )
+        )
+    )
+    
+    @ApiResponse(responseCode = "200", description = "Successfully processed all trades.") // 4. Define successful response
+    @ApiResponse(responseCode = "500", description = "Processing failed. Trade kept in store for retry.") // 5. Define error response
+
     public ResponseEntity<String> processTrades(@RequestBody List<Map<String, String>> tradeObjects) {
         
         System.out.println("Received " + tradeObjects.size() + " trade objects.");
