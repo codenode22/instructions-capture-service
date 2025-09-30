@@ -1,6 +1,6 @@
 Instructions Capture Service: Operation Guide
 
-1. Build and Deployment
+     1. Build and Deployment
 
 Run the following commands sequentially from the project root directory 
 1. mvn clean package -DskipTests	
@@ -36,7 +36,7 @@ If the ingestion is successful, the service is expected to return:
 
 Successfully processed 10 trades.
 
-3. Log Monitoring (Kafka Flow)
+     3. Log Monitoring (Kafka Flow)
 
 Once the curl command is executed, the following strings confirm the successful end-to-end flow from the REST endpoint, through Kafka, and back to the consumer listeners.
 
