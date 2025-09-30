@@ -58,6 +58,3 @@ Instructions Capture Service: Operation Guide
 4. Junit
 
         TradeTransformerTest
-
-
-Gemini can make mistakes, so double-check it
