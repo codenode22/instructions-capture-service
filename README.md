@@ -11,7 +11,7 @@ Run the following commands sequentially from the project root directory
 
 
 
-2. API Testing and Interaction
+     2. API Testing and Interaction
 
 The service endpoint is available for testing using curl.
 
