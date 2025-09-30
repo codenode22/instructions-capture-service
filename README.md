@@ -4,13 +4,12 @@ This guide outlines the build, deployment, and testing steps for the instruction
 
 1. Build and Deployment
 
-Run the following commands sequentially from the project root directory to package the application, manage Docker containers, and start the services.
-Step	Command	Description
-1. Package	mvn clean package -DskipTests	Cleans the target directory and packages the Spring Boot application into a runnable JAR, skipping unit tests.
-2. Install	mvn clean install -DskipTests	Installs the artifact into the local Maven repository (usually required before Docker build).
-3. Clean Down	docker compose down -v	Stops and removes all containers, networks, and named volumes defined in docker-compose.yml.
-4. Initial Up	docker compose up -d	Starts the services (Kafka, Zookeeper, etc.) in detached mode (-d).
-5. Build & Run	docker compose up --build	Rebuilds the application image (to include the latest JAR) and starts all services in the foreground, showing logs.
+Run the following commands sequentially from the project root directory 
+1. mvn clean package -DskipTests	
+2. mvn clean install -DskipTests	
+3. docker compose down -v	
+4. docker compose up -d	
+5. docker compose up --build	
 
 2. API Testing and Interaction
 
