@@ -1,0 +1,37 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.versions
+pom.xml.next
+release.properties
+releaseArguments.properties
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata
+bin/tmp/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# VS Code
+.vscode/
+
+# Log files
+*.log
+logs/
+
+# Packaging
+*.jar
+*.war
+*.ear
+
+# misc
+.DS_Store
+Thumbs.db

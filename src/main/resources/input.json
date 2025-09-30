@@ -1,0 +1,83 @@
+[
+    {
+      "platform_id": "ACCT123",
+      "account": "90091234",
+      "security": "abc123",
+      "type": "Buy",
+      "amount": 100000,
+      "timestamp": "2025-08-04T21:15:33Z"
+    },
+    {
+      "platform_id": "ACCT124",
+      "account": "88815678",
+      "security": "xyz789",
+      "type": "Sell",
+      "amount": 50000,
+      "timestamp": "2025-08-05T10:20:15Z"
+    },
+    {
+      "platform_id": "ACCT125",
+      "account": "90092345",
+      "security": "def456",
+      "type": "Buy",
+      "amount": 75000,
+      "timestamp": "2025-08-05T15:45:00Z"
+    },
+    {
+      "platform_id": "ACCT126",
+      "account": "77726789",
+      "security": "uvw901",
+      "type": "Sell",
+      "amount": 120000,
+      "timestamp": "2025-08-06T09:30:50Z"
+    },
+    {
+      "platform_id": "ACCT127",
+      "account": "90093456",
+      "security": "ghi789",
+      "type": "Buy",
+      "amount": 30000,
+      "timestamp": "2025-08-06T18:05:22Z"
+    },
+    {
+      "platform_id": "ACCT128",
+      "account": "66637890",
+      "security": "jkl012",
+      "type": "Sell",
+      "amount": 200000,
+      "timestamp": "2025-08-07T11:55:40Z"
+    },
+    {
+      "platform_id": "ACCT129",
+      "account": "90094567",
+      "security": "mno345",
+      "type": "Buy",
+      "amount": 85000,
+      "timestamp": "2025-08-07T14:10:10Z"
+    },
+    {
+      "platform_id": "ACCT130",
+      "account": "55548901",
+      "security": "pqr678",
+      "type": "Sell",
+      "amount": 45000,
+      "timestamp": "2025-08-08T08:25:35Z"
+    },
+    {
+      "platform_id": "ACCT131",
+      "account": "90095678",
+      "security": "stu901",
+      "type": "Buy",
+      "amount": 150000,
+      "timestamp": "2025-08-08T16:50:05Z"
+    },
+    {
+      "platform_id": "ACCT132",
+      "account": "44459012",
+      "security": "vwx234",
+      "type": "Sell",
+      "amount": 90000,
+      "timestamp": "2025-08-09T13:42:18Z"
+    }
+  ]
+  
